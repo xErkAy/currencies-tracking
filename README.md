@@ -20,7 +20,7 @@ python manage.py makemigrations project
 python manage.py migrate project
 python manage.py migrate
 python manage.py makemigrations currency
-python manage.py migrate
+python manage.py migrate currency
 ```
 
 #### Create a superuser to use Django-Admin panel.
