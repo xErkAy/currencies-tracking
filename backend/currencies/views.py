@@ -55,7 +55,7 @@ class GetTrackingCurrencies(APIView):
             return Response(TrackingCurrencySerializerWithDate(queryset, context={'date': max_date}, many=True).data)
 
 
-class CreateUpdateTrackingCurrency(APIView):
+class CreateTrackingCurrency(APIView):
 
     @staticmethod
     def _validate_data(data):
