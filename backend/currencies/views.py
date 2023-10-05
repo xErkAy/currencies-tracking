@@ -43,7 +43,7 @@ class GetTrackingCurrencies(APIView):
         sort = self._get_sorting_value(request.query_params)
         max_date = CurrencyHistory.objects.aggregate(Max('date')).get('date__max')
 
-        if request.user is AnonymousUser:
+        if isinstance(request.user, AnonymousUser):
             queryset = CurrencyHistory.objects.filter(date=max_date)
             if sort is not None:
                 queryset = queryset.order_by(sort)
