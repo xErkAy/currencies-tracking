@@ -32,9 +32,7 @@ class GetTrackingCurrencies(APIView):
                 return 'value'
             elif sort == 'desc':
                 return '-value'
-            else:
-                return None
-
+                
         return None
 
     @method_decorator(cache_page(60 * 5))
