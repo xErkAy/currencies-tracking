@@ -11,9 +11,9 @@ class CurrencyInstance:
     nominal: int
 
     def __init__(self, data: dict):
-        self.id = data.get('ID')
-        self.num_code = data.get('NumCode')
-        self.char_code = data.get('CharCode')
-        self.name = data.get('Name')
-        self.value = data.get('Value')
-        self.nominal = data.get('Nominal')
+        self.id = data['ID']
+        self.num_code = data['NumCode']
+        self.char_code = data['CharCode']
+        self.name = data['Name']
+        self.value = data['Value']
+        self.nominal = data['Nominal']
