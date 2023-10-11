@@ -1,5 +1,3 @@
-# Sibdev
-
 ## Getting started
 
 #### Copy the content from .env.example to .env file
