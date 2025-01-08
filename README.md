@@ -1,4 +1,4 @@
-## Getting started
+## Currencies tracking
 
 #### Copy the content from .env.example to .env file
 ```
@@ -12,7 +12,6 @@ docker-compose up -d
 ```
 
 #### Make and apply all the migrations.
-
 ```
 python manage.py makemigrations project
 python manage.py migrate project
@@ -22,14 +21,13 @@ python manage.py migrate currency
 ```
 
 #### Create a superuser to use Django-Admin panel.
-
 ```
 python manage.py createsuperuser
 ```
 ###
 
-#### Then you have to fill up the database with currencies.
 
+#### Then you have to fill up the database with currencies.
 ```
 python manage.py fill_up_currencies
 ```
@@ -39,20 +37,20 @@ python manage.py fill_up_currencies
 ```
 python manage.py update_currencies_history
 ```
-###
 
+###
 #### Now, you are ready to use the API.
 The project uses nginx, so it runs on 80 port (wtih default settings).
 ```
 http://localhost/api/
 ```
-#### Notice: you have to be authenticated to use the API, so use the:
+### -- Notice --
+#### You have to be authenticated to use the API, so use the following endpoint to create a user
 ```
 http://localhost/auth/registration/
 ```
-#### to create a user.
-####
 
+####
 #### Then use this to authenticate:
 ```
 http://localhost/auth/
@@ -62,3 +60,5 @@ http://localhost/auth/
 ```
 http://localhost/docs/
 ```
+
+####
